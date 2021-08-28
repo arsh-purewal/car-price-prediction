@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Car Price Prediction</title>
+        <style>
+            body
+            {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/851/262/559/1962-auto-automobile-car-wallpaper-preview.jpg");
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            }
+            .container
+            {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            h2
+            {
+                margin-top: 50px;
+                margin-left: 800px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 55px;
+            }
+            form
+            {
+                width: 350px;
+                margin-top: 50px;
+                margin-left: 900px;
+                border: solid;
+                padding: 13px 12px;
+                border-radius: initial;
+                background-color: rgb(63, 245, 133)
+                font-size: 20px;
+            }
+            input 
+            {    
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                font-size: 15px;
+            }
+            button
+            {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            font
+            {
+                color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="color: rgb(250, 56, 56);"><b>Car Price Prediction</b></h2>
+        <form action="http://127.0.0.1:5000/prediction" method="post" autocomplete="on">
+        <label style="color: azure;" for="fmxp">Max Power</label><br>
+        <input type="number" id="fmxp" name="Max_Power" placeholder="Enter max Power"><br>
+        <label style="color: azure;" for="ftrq">Torque</label><br>
+        <input type=number id="ftrq" name="Torque" placeholder="Enter Torque"><br>
+        <label style="color: azure;" for="fname">Engine</label><br>
+        <input type="text" id="fname" name="Engine" placeholder="Enter engine in cc"><br>
+        <label style="color: azure;" for="fyear">Year</label><br>
+        <input type=number id="fyear" name="year" placeholder="Enter Year"><br>
+        <button style="color: #0d1414;" type="submit">Submit</button>
+        
+        <b style="color: aliceblue;">Diagnosis:{{diagnosis_output}}</b>
+        
+    </form>
+    </body>
+</html>
