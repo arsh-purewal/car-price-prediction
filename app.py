@@ -22,7 +22,7 @@ def predict():
     prediction = loadedModel.predict([[Max_Power, Torque, Engine, year]])
     prediction    
     
-    return render_template('index.html', diagnosis_output=prediction)
+    return render_template('index.html', Predictd_Price=prediction)
 
 #main function
 if __name__ == "__main__":
