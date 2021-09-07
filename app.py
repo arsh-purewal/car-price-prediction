@@ -10,7 +10,7 @@ loadedModel = pickle.load(open('car_price.pkl', 'rb'))
 #User defined Functions
 @app.route('/', methods=['GET'])
 def Home():
-    return render_template('car_price_prediction.html')
+    return render_template('index.html')
 
 @app.route('/prediction', methods= ['POST'])
 def predict():
@@ -22,7 +22,7 @@ def predict():
     prediction = loadedModel.predict([[Max_Power, Torque, Engine, year]])
     prediction    
     
-    return render_template('car_price_prediction.html', diagnosis_output=prediction)
+    return render_template('index.html', diagnosis_output=prediction)
 
 #main function
 if __name__ == "__main__":
